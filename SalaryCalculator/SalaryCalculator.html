@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手取り計算ツール</title>
+    <link rel="stylesheet" href="SalaryCalculator.css">
+</head>
+<body>
+    <div class="container">
+        <h1>給料手取り計算機</h1>
+        <form id="salary-form">
+            <label for="prefecture">都道府県:</label>
+            <select id="prefecture" name="prefecture">
+                <!-- 都道府県の選択肢をここに追加 -->
+                <option value="tokyo">東京都</option>
+                <option value="osaka">大阪府</option>
+                <!-- 他の都道府県も追加可能 -->
+            </select>
+
+            <label for="monthly-income">月収金額:</label>
+            <input type="number" id="monthly-income" name="monthly-income" required>
+
+            <button type="button" onclick="calculate()">計算</button>
+        </form>
+
+        <div id="results" class="results">
+            <h2>計算結果</h2>
+            <h3>年収ver:</h3>
+            <p>額面年収入: <span id="annual-gross-income">0円</span></p>
+            <p>所得税: <span id="annual-income-tax">0円</span></p>
+            <p>住民税: <span id="annual-resident-tax">0円</span></p>
+            <p>健康保険: <span id="annual-health-insurance">0円</span></p>
+            <p>厚生年金: <span id="annual-pension">0円</span></p>
+            <p>雇用保険: <span id="annual-employment-insurance">0円</span></p>
+            <p>手取り額: <span id="annual-net-income">0円</span></p>
+
+            <h3>月収ver:</h3>
+            <p>額面月収入: <span id="monthly-gross-income">0円</span></p>
+            <p>所得税: <span id="monthly-income-tax">0円</span></p>
+            <p>住民税: <span id="monthly-resident-tax">0円</span></p>
+            <p>健康保険: <span id="monthly-health-insurance">0円</span></p>
+            <p>厚生年金: <span id="monthly-pension">0円</span></p>
+            <p>雇用保険: <span id="monthly-employment-insurance">0円</span></p>
+            <p>手取り額: <span id="monthly-net-income">0円</span></p>
+        </div>
+    </div>
+
+    <!-- 著作権マーク -->
+    <footer>
+        <div class="copy-content">
+            <small class="copy">&copy;2024 H.F</small>
+        </div>
+    </footer>
+
+    <script src="SalaryCalculator.js"></script>
+</body>
+</html>
